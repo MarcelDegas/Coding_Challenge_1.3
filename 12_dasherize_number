@@ -1,0 +1,44 @@
+def dasherize_number(num)
+	num = num.to_s
+	num = num.split("")
+	ret = ""
+
+	i = 0
+	while i < (num.length)
+	 
+
+	   if (num[i].to_i) % 2 == 1
+	   	  if (i != 0) && (num[i - 1] % 2 == 0)
+	   	      ret += "-" 
+	   	  end 
+	   	  ret += num[i] 
+	   	  if i != (num.length - 1) 
+	   	      ret += "-" 
+	   	  end
+	   else
+	      ret += num[i]
+	   end
+	  
+       i += 1
+	end 
+   puts ret
+   ret
+end
+
+
+puts(
+  'dasherize_number(203) == "20-3": ' +
+  (dasherize_number(203) == '20-3').to_s
+)
+puts(
+  'dasherize_number(303) == "3-0-3": ' +
+  (dasherize_number(303) == '3-0-3').to_s
+)
+puts(
+  'dasherize_number(333) == "3-3-3": ' +
+  (dasherize_number(333) == '3-3-3').to_s
+)
+puts(
+  'dasherize_number(3223) == "3-22-3": ' +
+  (dasherize_number(3223) == '3-22-3').to_s
+)
