@@ -1,0 +1,35 @@
+# why is this bugging on line 10?
+
+def third_greatest(num)
+	greatest = nil
+	second_greatest = nil
+	third greatest = nil
+
+	num.each do |n|
+	    current_number = n
+       if (current_number > greatest) || (greatest == nil)
+         third_greatest = second_greatest 
+         second_greatest = greatest
+         greatest = current_number
+       elsif (current_number > second_greatest) || (second_greatest == nil)
+       	 third_greatest = second_greatest 
+         second_greatest = current_number
+       elsif (current_number > third_greatest) || (third_greatest == nil)
+       	 third_greatest = current_number
+       end
+	end
+	third_greatest
+end
+
+puts(
+  'third_greatest([5, 3, 7]) == 3: ' +
+  (third_greatest([5, 3, 7]) == 3).to_s
+)
+puts(
+  'third_greatest([5, 3, 7, 4]) == 4: ' +
+  (third_greatest([5, 3, 7, 4]) == 4).to_s
+)
+puts(
+  'third_greatest([2, 3, 7, 4]) == 3: ' +
+  (third_greatest([2, 3, 7, 4]) == 3).to_s
+)
