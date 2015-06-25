@@ -1,10 +1,11 @@
 def most_common_letters(string)
-	most_common_count = 0
 	most_common_letter = ""
+	most_common_count = 0
+	count = 1
 	letters = string.split("")
 	letters.sort!
 	letters.each_with_index do |current_letter, index|
-	  if current_letter = letters[index + 1]
+	  if current_letter == letters[index + 1]
 		  count += 1 
           if count > most_common_count
 	    	most_common_count = count
