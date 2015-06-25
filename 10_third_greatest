@@ -3,7 +3,7 @@
 def third_greatest(num)
 	greatest = nil
 	second_greatest = nil
-	third greatest = nil
+	third_greatest = nil
 
 	num.each do |n|
 	    current_number = n
