@@ -1,0 +1,19 @@
+def scramble_string(string, array)
+	res = ""
+
+	i = 0
+	while i < array.length
+		res += string[array[i]]
+		i += 1
+	end
+	res
+end
+
+puts(
+  'scramble_string("abcd", [3, 1, 2, 0]) == "dbca": ' +
+  (scramble_string("abcd", [3, 1, 2, 0]) == "dbca").to_s
+)
+puts(
+  'scramble_string("markov", [5, 3, 1, 4, 2, 0]) == "vkaorm"): ' +
+  (scramble_string("markov", [5, 3, 1, 4, 2, 0]) == "vkaorm").to_s
+)
