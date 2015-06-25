@@ -7,14 +7,14 @@ def third_greatest(num)
 
 	num.each do |n|
 	    current_number = n
-       if (current_number > greatest) || (greatest == nil)
+       if (greatest == nil) || (current_number > greatest)
          third_greatest = second_greatest 
          second_greatest = greatest
          greatest = current_number
-       elsif (current_number > second_greatest) || (second_greatest == nil)
+       elsif (second_greatest == nil) || (current_number > second_greatest) 
        	 third_greatest = second_greatest 
          second_greatest = current_number
-       elsif (current_number > third_greatest) || (third_greatest == nil)
+       elsif (third_greatest == nil) || (current_number > third_greatest)  
        	 third_greatest = current_number
        end
 	end
